@@ -79,10 +79,10 @@ You can browse to it by visting: [http://192.168.100.1](http://192.168.100.1) or
 Examples:
 
 Orange PL:
-![ONT from Orange PL](/assets/images/ont-1.png)
+![ONT from Orange PL]( {{ '/assets/images/ont-1.png' | relative_url }} )
 
 Openreach UK:
-![ONT from Openreach UK](/assets/images/ont-2.png)
+![ONT from Openreach UK]( {{ '/assets/images/ont-2.png' | relative_url }} )
 
 
 
