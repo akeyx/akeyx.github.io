@@ -33,11 +33,11 @@ The primary reason to replace the external ONT is to reduce device count, power 
 - Visual access to the back of the original ONT
 - A Linux workstation (because it's: easier, better, nicer, free, etc. )
 - Tools: 
- - telnet
- - netcat/nc
- - binwalk
- - strings
- - grep
+  - telnet
+  - netcat/nc
+  - binwalk
+  - strings
+  - grep
 - (Optionally) SFP to ethernet medium converter
 - A router that can take in SFP+ modules eg. a Mikrotik HEXS or RB0009 or similar router.
 
