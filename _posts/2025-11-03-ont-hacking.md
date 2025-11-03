@@ -225,15 +225,19 @@ To do it via the web interface go to: Admin->OMCI Information and set the:
 
 Once set click on the "Apply Changes" button.
 
+The below are a working OMCI_SW_VER* values as of November 2025 for the given ISPs.
+
 #### Orange Poland
 
 ```
 flash set OMCI_SW_VER1 3FE49717AOCK71
+flash set OMCI_SW_VER2 3FE49717AOCK71
 ```
 
 #### Openreach UK
 
 ```
+flash set OMCI_SW_VER1 3FE45655BOCK91
 flash set OMCI_SW_VER2 3FE45655BOCK91
 ```
 
