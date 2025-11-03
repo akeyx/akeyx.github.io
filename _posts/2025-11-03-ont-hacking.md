@@ -149,7 +149,7 @@ You can also have a browse around in the web interface available under: [http://
 
 # The problem
 
-So you may think that if you retype all the settings from the back of the original ONT into the Leox ONT SFP module it should just work... well sadly it wont! This is due to the fact that the ONU (the ISP part of the connection) is expecting the ONT to be at a certain firmware version. You may be able to find some working versions for your ISP but ultimately if you got this far you may just as well extract the exact version the ONU is expecting yourself.
+So you may think that if you retype all the settings from the back of the original ONT into the Leox ONT SFP module it should just work... well sadly it wont! This is due to the fact that the ONU (the ISP part of the connection) is expecting the ONT to be at a certain firmware version. You may be able to find some working versions for your ISP but ultimately if you got this far you may just as well extract the exact version the ONU is expecting.
 
 # Configure the ONT stick
 
