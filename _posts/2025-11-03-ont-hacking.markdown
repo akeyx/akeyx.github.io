@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Replacing Nokia ONT (G-010G-Q/R) to SFP+ GPON Stick Leox LXT-010S-H on UK Openreach & Orange PL"
+title: "Replacing Nokia ONT (G-010G-Q/R) with SFP+ GPON Stick (Leox LXT-010S-H) on UK Openreach & Orange PL"
 description: "Full guide to replace your bulky Nokia ONT (G-010G-Q, G-010G-R) with a single SFP+ GPON module (Leox LXT-010S-H). Includes critical steps for firmware extraction and OLT setup on UK Openreach (BT) and Polish Orange FTTP."
 date:   2025-11-03 14:15:57 +0000
 categories: ONT hacking
