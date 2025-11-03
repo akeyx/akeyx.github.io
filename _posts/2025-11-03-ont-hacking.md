@@ -225,7 +225,7 @@ To do it via the web interface go to: Admin->OMCI Information and set the:
 
 Once set click on the "Apply Changes" button.
 
-The below are a working OMCI_SW_VER* values as of November 2025 for the given ISPs.
+The below are working OMCI_SW_VER* values as of November 2025 for the given ISPs.
 
 #### Orange Poland
 
