@@ -388,4 +388,4 @@ Happy hacking!
 
 
 # Credits
-A lot of the above info has been done with the help of Msh100 who helped me extract the info from on my own ONT in Openreach network. I then tested the same on the Orange PL network where I refined the process.
+A lot of the above info has been done with the help of Msh100 who helped me extract the info from on my own ONT on Openreach network. I then tested the same on the Orange PL network where I refined the process.
