@@ -1,10 +1,11 @@
 ---
-title: Replacing Nokia ONT with SFP+ Leox LXT-010S-H
+title: Nokia ONT (G-010G-Q/R) to SFP+ GPON Stick Replacement Guide: Leox LXT-010S-H for UK Openreach & Orange PL
 parent: Home nav_order: 1
 has_children: true
+description: Full guide to replace your bulky Nokia ONT (G-010G-Q, G-010G-R) with a single SFP+ GPON module (Leox LXT-010S-H). Includes critical steps for firmware extraction and OLT setup on UK Openreach (BT) and Polish Orange FTTP.
 ---
 
-# Replacing Nokia ONT with SFP+ Leox LXT-010S-H
+# Nokia ONT Replacement: SFP+ Leox LXT-010S-H Guide
 
 This page documents how to replace ISP issued Nokia ONT (eg. G-010G-Q or G-010G-R) with your own. Here I'll use [Leox LXT-010S-H](https://www.leolabs.pl/ont-leox-lxt-010s-h.html).
 
@@ -16,7 +17,8 @@ These instructions have been tested against:
 
 # But Why ?
 
-Because:
+The primary reason to replace the external ONT is to reduce device count, power consumption, and gain full control over the GPON connection parameters. This is why you'd invest in a solution like the Leox SFP+ stick instead of the bulky ISP-provided unit.
+
 - I want to
 - I can
 - I don't want to have yet another device in front of my router
@@ -376,4 +378,3 @@ Happy hacking!
 
 # Credits
 A lot of the above info has been done with the help of Msh100 who helped me extract the info from on my own ONT in Openreach network. I then tested the same on the Orange PL network where I refined the process.
-
