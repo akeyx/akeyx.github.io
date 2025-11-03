@@ -304,8 +304,8 @@ The ONT has successfully connected but if you don't see the above output and ins
 #### OMCI_SW_VER* mismatch
 
 If in the previous step you didn't get a long output similar to the one posted your ISP's OLT may requre your ONT at a different version. You may notice that:
-- Your Leox ONT has become very, very **SLOW. 
-- Your Leox ONT has rebooted or disconnted your from telnet.
+- Your Leox ONT has become very, very **SLOW**. 
+- Your Leox ONT has rebooted or randomly disconnected you from telnet.
 - if you run this:
 ```
 ls -al /tmp/
