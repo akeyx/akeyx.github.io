@@ -6,6 +6,7 @@ date:   2025-11-03 14:15:57 +0000
 categories: ONT hacking
 ---
 
+
 # Nokia ONT Replacement: SFP+ Leox LXT-010S-H Guide
 
 This page documents how to replace ISP issued Nokia ONT (eg. G-010G-Q or G-010G-R) with your own. Here I'll use [Leox LXT-010S-H](https://www.leolabs.pl/ont-leox-lxt-010s-h.html).
@@ -53,7 +54,7 @@ If you have access to an SFP to ethernet [media converter like eg this one ](htt
 
 **Note**: The advantage of using the medium converter is that you can configure the SFP ONT stick without the need to have the fibre optic cable plugged into it yet.
 
-## Access via a (mikrotik) router
+## Access via a (Mikrotik) router
 If you only have your target router at hand which will eventually be the one hosting the SFP ONT you can configure yourself a NAT rule to masquarade your LAN ips to one from `192.168.100.0/24` to be able to access the stick. You could also play with bridging ports or with vlans but I'd say NATing is the simplest so something like this should do:
 
 ```
@@ -76,9 +77,10 @@ You can browse to it by visting: [http://192.168.100.1](http://192.168.100.1) or
 
 ## Get the original (ISP provided) ONT details
 
-Examples:
+### Examples
 
 Orange PL:
+
 ![ONT from Orange PL]( {{ '/assets/images/ont-1.png' | relative_url }} )
 
 Openreach UK:
@@ -146,7 +148,7 @@ You can also have a browse around in the web interface available under: [http://
 
 # The problem
 
-So at this point you may think that if you retype all the settings from the back of the original ONT into the Leox ONT SFP module it should just work... well sadly it wont! This is due to the fact that the ONU (the ISP part of the connection) is expecting the ONT to be at a certain firmware version. You maybe able to find some working versions for your ISP but the ultimately if got this far you may just as well discover it yourself.
+So you may think that if you retype all the settings from the back of the original ONT into the Leox ONT SFP module it should just work... well sadly it wont! This is due to the fact that the ONU (the ISP part of the connection) is expecting the ONT to be at a certain firmware version. You may be able to find some working versions for your ISP but ultimately if you got this far you may just as well extract the exact version the ONU is expecting yourself.
 
 # Configure the ONT stick
 
@@ -213,7 +215,7 @@ flash set HW_HWVER 3FXXXXXXXXXX
 
 ### Set the OMCI software versions
 
-At this point you have to populate the OMCI software versions. You can do this via the web interface or via telnet like all the other values.
+You have to populate the OMCI software versions. You can do this via the web interface or via telnet like all the other values.
 To do it via the web interface go to: Admin->OMCI Information and set the:
 - OMCI software version 1
 - OMCI software version 2
@@ -291,7 +293,7 @@ ToDInfo:
 =================================
 ```
 
-At this point your ONT has successfully connected but if you don't see the above output and instead just see short headers following each command keep reading.
+The ONT has successfully connected but if you don't see the above output and instead just see short headers following each command keep reading.
 
 
 #### OMCI_SW_VER* mismatch
@@ -309,7 +311,7 @@ among the files listed may be one named: `img.tar` which file size is constantly
 Basically what happens is that your stick is trying to download the firmware file. Because the OMCI_SW_VER* is not what OLT expects it will push a new file everytime initial connections is brought up. The stick will stream/download the firmware file and store it as /tmp/img.tar. We have to pull the firmware from the stick, try to extract it and get the version from it to update our OMCI_SW_VER values.
 
 #### Preparing for the firmware streaming
-At this point the stick is still very slow but you have to be patient and telnet to it. Confirm that there is indeed `/tmp/img.tar` file with ever increasing file size. If there isn't some of the previously set OMCI* and GPON* flash values may have been set incorrectly. Double check them and if sure that all is good click on "Apply Changes" button on the `Admin->OMCI Information` screen. 
+Currently the stick is still very slow but you have to be patient and telnet to it. Confirm that there is indeed `/tmp/img.tar` file with ever increasing file size. If there isn't some of the previously set OMCI* and GPON* flash values may have been set incorrectly. Double check them and if sure that all is good click on "Apply Changes" button on the `Admin->OMCI Information` screen. 
 
 The firmware file is about 4MB big. It's best to wait until a new download has been started (the process loops forever if the there is a SW_VER mismatch) then do the following:
 

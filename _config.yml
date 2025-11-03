@@ -21,32 +21,20 @@
 title: a.key's random output
 description: >- # this means to ignore newlines until "baseurl:"
   Random output.
-#baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://akeyx.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  akeyx
 
 # Build settings
-theme: minima
+#theme: minima
+#theme: lanyon
+
+remote_theme: pages-themes/hacker@v0.2.0
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+permalink: /blog/:title/
